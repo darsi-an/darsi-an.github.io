@@ -59,7 +59,6 @@ authors:
         bio: 
         external-image: true
         picture: assets/images/profile.jpg
-        #twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
