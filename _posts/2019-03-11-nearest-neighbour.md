@@ -66,7 +66,7 @@ A good question to consider is how to choose k, larger k may lead to better perf
 ### Parameter Tuning with Cross Validation
 Here we will discuss a method that can be used to find the optimal k value. Cross validation is used to estimate the test error associated with a learning method in order to evalute its performance, or to select the appropriate level of flexibility. The training set is divided into t groups or folds (typically k but we use k for number of neighbors) of approximately equal size. The first fold is the validation set and the remaining $$t - 1$$ folds is the training set the method is fit on. The misclassification error is computed on the validation set. This is repeated for all t choices of the validation set. For each choice of k, find the average error across validation sets. Choose the value of k with the lowest error.
 
-<!-- 
+
 ```python
 # loading the digits data set.
 digits = load_digits()
@@ -91,30 +91,14 @@ print ("The reamining number of data points is", X.shape[0])
 
 ```python
 def show_some_digits(X, Y):
-
-    # Here we just want to visualize some of the data points in the data set, along with their labels. 
-    #
-    # Create a large figure, to be filled with multiple subplots
     plt.figure(figsize=(20,8))
-    # Go over the first 30 data points
     for index, (image, label) in enumerate(zip(X[0:30], Y[0:30])):
         plt.subplot(3, 10, index + 1)
-        # Reshape the 64 features of each data point into an 8x8 image and then plot it.
         plt.imshow(np.reshape(image, (8,8)), cmap=plt.cm.gray)
-        # Write the label of each point.
         plt.title('Target Label: %i\n' % label, fontsize = 10)
     return
 
-
-# Here we create a noisy version of the data set
-# The way that we do it is we go over all the pixels of
-# each of the data points; then with probability p we multiply
-# the value of that pixel by 0 (makring it essentially black).
-# Otherwise (with probability 1-p) we multiply the value of that
-# pixel by 1 (essentially keeping the pixel untouched)
-
-# This the probability p of dropping a pixel (making it zero)
-def make_it_noisy (X, drop_probability):
+def blurr_digit (X, drop_probability):
 # This is how we create the noisy data set
     return np.multiply(X, np.random.choice([0, 1], size=(360,64), p=[drop_probability, 1 - drop_probability]))
 
@@ -122,7 +106,7 @@ def make_it_noisy (X, drop_probability):
 print ("Hear are some of the original digits (first three rows)...and then their noisy versions")
 show_some_digits(X, Y)
 plt.show()
-X_noisy = make_it_noisy (X, 0.6)
+X_noisy = blurr_digit (X, 0.6)
 show_some_digits(X_noisy, Y)
 plt.show()
 
@@ -158,15 +142,14 @@ print ("The optimal number of neighbors is %d" % optimal_k)
 plt.plot(kList, MSE)
 plt.xlabel('Number of Neighbors K')
 plt.ylabel('Misclassification Error')
-plt.show() -->
+plt.show() 
 
 
 
-<!-- 
 ```
 
     The optimal number of neighbors is 5
     
 
-![Markdown Image](/assets/images/output_3_1.png) -->
+![Markdown Image](/assets/images/output_3_1.png) 
 
