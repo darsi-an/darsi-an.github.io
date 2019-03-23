@@ -61,7 +61,7 @@ KNN is an extension of NN, where we find K nearest neighbours and return the maj
 
 ## How do we choose k?
 A good question to consider is how to choose k, larger k may lead to better performance but if we set k too large we may end up looking at training points that are far away from the new test instance. One possible solution is to use cross-validation to find the optimal k. 
-> Rule of thumb: $$ k < \sqrt{n} $$, where n is the number of training instances.
+> Rule of thumb: $$ k<\sqrt{n} $$, where n is the number of training instances.
 
 ### Parameter Tuning with Cross Validation
 Here we will discuss a method that can be used to find the optimal k value. Cross validation is used to estimate the test error associated with a learning method in order to evalute its performance, or to select the appropriate level of flexibility. The training set is divided into t groups or folds (typically k but we use k for number of neighbors) of approximately equal size. The first fold is the validation set and the remaining $$t - 1$$ folds is the training set the method is fit on. The misclassification error is computed on the validation set. This is repeated for all t choices of the validation set. For each choice of k, find the average error across validation sets. Choose the value of k with the lowest error.
