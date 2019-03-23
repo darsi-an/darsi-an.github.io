@@ -7,7 +7,7 @@ description:
 
 # if it's an external image, update below for true
 # better with square images
-external-image: false
+external-image: true
 picture: assets/images/profile.jpg
 
 # If you want to include your resume, set to true
@@ -16,7 +16,7 @@ resume: false
 resume-external: false
 resume-url: 
 
-url: https://github.com/darsi-an
+url: https://darsi-an.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -42,7 +42,7 @@ disqus:
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: https://github.com/darsi-an
+github: darsi-an
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
@@ -57,9 +57,8 @@ authors:
     darsi-an:
         name: Darsi An
         bio: 
-        external-image: false
+        external-image: true
         picture: assets/images/profile.jpg
-        #twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -75,7 +74,7 @@ projects: false
 
 # if you don't need "about" or "blog", comment them out below
 about: false
-blog: true
+blog: false
 
 # do you want to show the "read time" of the posts?
 read-time: false
