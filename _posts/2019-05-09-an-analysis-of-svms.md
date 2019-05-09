@@ -26,12 +26,8 @@ Some of the different learning rules for SVM:
 Hard margin SVM is the learning rule which determines the hyperplane with the maximum margin among all linear separators that separate the training dataset. Let the hyperplane be parameterized by $$w$$ where $$\|w\|_2$$ does not affect the margin and only the direction is important. Hence without loss of generality, we assume $$ \|w\|_2 = 1 $$.
 
 > $$ \textbf{Learning rule:} $$  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$ \underset{(w,b): \|w\|=1}{\arg\max} \min{\|(\langle w,x_i \rangle + b) \|} $$   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$ \underset{(w,b): \|w\|=1}{\arg\max} \min{\|\langle w,x_i \rangle + b \|} $$   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s.t.  $$ \forall{i},  y_i(\langle w,x_i \rangle + b) > 0 $$
-
->  $$ \textbf{Learning Rule:} $$  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$ \underset{(w,b): \|w\|=1}{\arg\max} \min{\langle w,x_i +b} \| $$  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$ s.t.  \forall i,  y_i(<w,x_i> + b) > 0 $$
 
 An equivalent form of the rule as a quadratic optimization problem is defined as:
 
@@ -133,10 +129,10 @@ class SoftSVMClassifier(BaseEstimator, ClassifierMixin):
 ## Kernalized SVM 
 It is important to note that linearly non-separable features often become linearly separable if they are mapped to a high dimensional feature space. Embedding the input space into some high dimensional feature space makes the learning more expressive but at higher computational complexity and costs. However, using the kernel trick we don't need to compute the feature mapping $$\phi$$ explicitly. I won’t go specifics of kernels in this post but they are used to describe inner products in the feature space. Kernelized SVMs use the kernels of the feature mappings which are easier to compute. Doing so makes it possible to define a complex decision boundary on a high dimensional (even infinite) feature space with efficient computation.
 
->  $$ \textbf{Learning:} $$  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$  \underset{\alpha}{\min} \frac{1}{n} \max {0,1 - y^i<\alpha,k(x^i)>} + \lambda\alpha^T K\alpha $$  
+>  $$ \textbf{Learning Rule:} $$  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$  \underset{\alpha}{\min} \frac{1}{n} \max{0,1 - y^i \langle \alpha,k(x^i)\rangle} + \lambda\alpha^T K\alpha $$  
 $$ \textbf{Predictor for point x:} $$  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$ = sgn(< \alpha , k(x)>) $$
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$ = sgn(\langle \alpha , k(x)\rangle) $$
 
 ### Kernalized SVM Code
 Keralized SVM is used with a RBF kernal and tunes its hyperparamteres using GridSearchCV. 
