@@ -131,8 +131,7 @@ It is important to note that linearly non-separable features often become linear
 
 >  $$ \textbf{Learning Rule:} $$  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$  \underset{\alpha}{\min} \frac{1}{n} \max{0,1 - y^i \langle \alpha,k(x^i)\rangle} + \lambda\alpha^T K\alpha $$  
-  
-$$ \textbf{Predictor for point x:} $$  
+$$ \textbf{Predictor for point x:} $$   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$ sgn(\langle \alpha , k(x)\rangle) $$
 
 ### Kernalized SVM Code
