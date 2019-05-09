@@ -23,7 +23,7 @@ Some of the different learning rules for SVM:
 * Kernelized SVM
 
 ## Hard-SVM
-Hard margin SVM is the learning rule which determines the hyperplane with the maximum margin among all linear separators that separate the training dataset. Let the hyperplane be parameterized by $$W$$ where $$\|w\|_2$$ does not affect the margin and only the direction is important. Hence without loss of generality, we assume $$ \|w\|_2 = 1 $$. For anyone wanting to dive a little deeper, try to prove that the distance between a point $$x$$ and the hyperplane parameterized by $$w$$ where $$\|w\|_2 = 1 and \|<w,x>\| $$.
+Hard margin SVM is the learning rule which determines the hyperplane with the maximum margin among all linear separators that separate the training dataset. Let the hyperplane be parameterized by $$W$$ where $$\|w\|_2$$ does not affect the margin and only the direction is important. Hence without loss of generality, we assume $$ \|w\|_2 = 1 $$. For anyone wanting to dive a little deeper, try to prove that the distance between a point $$x$$ and the hyperplane parameterized by $$ \|w\|_2= 1 and \|<w,x>\| $$.
 
 > $$ \textbf{Learning Rule:} $$  
 $$ \underset{(w,b): \|w\|=1}{\arg\max}   \min \| {<w,x_i> +b} \| $$  
