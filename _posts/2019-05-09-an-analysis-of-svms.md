@@ -273,7 +273,7 @@ plt.plot(kernalVM_scores_all)
 
 
 plt.legend(['Hard SVM', 'Soft SVM', "Kernalized VM" ])
-plt.title('Accuracy of SVM vs NN vs Logistic Regression for different #folds')
+plt.title('Accuracy of hardSVM vs softSVM vs KernalVM #folds')
 plt.xlabel('Number of folds')
 plt.ylabel('Accuracy')
 
