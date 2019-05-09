@@ -25,9 +25,9 @@ Some of the different learning rules for SVM:
 ## Hard-SVM
 Hard margin SVM is the learning rule which determines the hyperplane with the maximum margin among all linear separators that separate the training dataset. Let the hyperplane be parameterized by $$w$$ where $$\|w\|_2$$ does not affect the margin and only the direction is important. Hence without loss of generality, we assume $$ \|w\|_2 = 1 $$.
 
->  $$ \textbf{input:} (x_1,x_2),...,(x_m,y_m) $$  
-$$ \underset{(w,b): \|w\|=1}{\arg\max}   \min \| {<w,x_i> +b} \| $$  
-$$ s.t.  \forall i,  y_i(<w,x_i> + b) > 0 $$
+>  $$ \textbf{Learning Rule:} $$  
+&nbsp;&nbsp;&nbsp;&nbsp;&n $$ \underset{(w,b): \|w\|=1}{\arg\max}   \min \| {<w,x_i> +b} \| $$  
+&nbsp;&nbsp;&nbsp;&nbsp;&n $$ s.t.  \forall i,  y_i(<w,x_i> + b) > 0 $$
 
 An equivalent form of the rule as a quadratic optimization problem is defined as:
 
