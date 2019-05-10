@@ -43,7 +43,7 @@ I find it
 Over the first morning smoke  
 In a pot of fresh roasted coffee   
 Spiked with 2 cups Amarula    
-An omelet of stimulants, The Potion.  
+An omelette of stimulants, The Potion.  
 
 I was woken by withdrawal  
 Up at 3am  
