@@ -1,5 +1,5 @@
 ---
-title: Woken by Withdrawl
+title: 'Woken by Withdrawal'
 layout: post
 date: 2019-05-07 03:00
 image: "/assets/images/markdown.jpg"
