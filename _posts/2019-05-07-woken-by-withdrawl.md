@@ -5,7 +5,7 @@ date: 2019-05-07 03:00
 image: "/assets/images/markdown.jpg"
 tag:
 - Literature
-category: blog
+category:
 author: darsi-an
 description: 
 ---
