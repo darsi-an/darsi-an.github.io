@@ -1,5 +1,5 @@
 ---
-title: 'An Analysis of Support Vector Machines Learning Rules'
+title: 'An Analysis of Support Vector Machine Learning Rules'
 layout: post
 date: 2019-05-09 22:48
 image: "/assets/images/markdown.jpg"
@@ -38,7 +38,7 @@ $$ \textbf{solve:} $$
 $$ \textbf{output:} $$  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $$ \hat{w} = \frac{w_0}{\|w_0\|} , \hat{b} = \frac{b_0}{\|w_0\|} $$
 
-The above form gives the output as the hyperplane with the largest margin that separates the data. The homogenous case of this form is given when the bias is zero and the separator goes through the origin. Below is a plots the maximum margin separating hyperplane within a two-class separable dataset using a Support Vector Machine classifier with linear kernel. 
+The above form gives the output as the hyperplane with the largest margin that separates the data. The homogenous case of this form is given when the bias is zero and the separator goes through the origin. The graph below plots the maximum margin separating hyperplane within a two-class separable dataset using a Support Vector Machine classifier with linear kernel. 
 
 ![png](/assets/images/magin_hyperplane.png)
 
