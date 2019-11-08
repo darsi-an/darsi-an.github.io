@@ -1,5 +1,5 @@
 ---
-title: 'Hyperparameter Tuning for K Nearest Neighbours'
+title: 'Hyperparameter Tuning for K Nearest Neighbors'
 layout: post
 date: 2019-03-10 22:48
 image: "/assets/images/markdown.jpg"
@@ -34,7 +34,7 @@ Non-parametric models can be used with arbitrary distributions and without the a
 Additionally, KNN makes no explicit assumptions regarding the underlying distribution of the data or about the form of $$f$$, the hypothesis.
 
 ## Distance Metrics
-The value of the target function for a new test instance is estimated from the known value of the nearest training example(s). The nearest neighbour(s) are found using a distance measure or metric. The distance metric, d(x^{(a)},x^{(b)}), typically used (and for the rest of this article) is defined to be Euclidean. Common distance metrics include:
+The value of the target function for a new test instance is estimated from the known value of the nearest training example(s). The nearest neighbor(s) are found using a distance measure or metric. The distance metric, d(x^{(a)},x^{(b)}), typically used (and for the rest of this article) is defined to be Euclidean. Common distance metrics include:
 
 * **Euclidean:** $$ d(x^{(a)},x^{(b)}) = \sqrt{\sum_{i=1}^{d}\|(x^{(a)}_i - x^{(b)}_i)}\|$$
 * **Manhattan:** $$ d(x^{(a)},x^{(b)}) = \sum_{i=1}^{d}\| x^{(a)}_i - x^{(b)}_i \| $$
@@ -42,8 +42,8 @@ The value of the target function for a new test instance is estimated from the k
 
 There are many other distance metrics (Tanimoto, Jaccard, Cosine) but they should be chosen based on the properties of your data.
 
-### Nearest Neighbour
-The nearest neighbour algorithm is simply a case of KNN where $$k=1$$. An important property of the nearest neighbour algorithm for binary classification is that it is not more than twice the Bayesian error rate. 
+### Nearest Neighbor
+The nearest neighbor algorithm is simply a case of KNN where $$k=1$$. An important property of the nearest neighbor algorithm for binary classification is that it is not more than twice the Bayesian error rate. 
 
 1. Find k examples $${x^{(i)},t^{(i)}}$$ (from the stored training set) closest to the test instance **x** that is:
 > $$x^{*} = \underset{x_{i}\in TrainSet}{\arg\min} \| x^{(a)} - x^{(b)} \|_2$$
@@ -52,7 +52,7 @@ The nearest neighbour algorithm is simply a case of KNN where $$k=1$$. An import
 
 
 ### K Nearest Neighbors
-KNN is an extension of NN, where we find K nearest neighbours and return the majority vote of their labels. K yields smoother predictions, since we average more data.
+KNN is an extension of NN, where we find K nearest neighbors and return the majority vote of their labels. K yields smoother predictions, since we average more data.
 
 1. Find k examples $${x^{(i)},t^{(i)}}$$ closest to the test instance **x** 
 2. Classification output is majority class
