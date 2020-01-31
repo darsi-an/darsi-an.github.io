@@ -12,7 +12,16 @@ description:
 
 
 # Introduction 
-Support Vector Machines (SVM) are a machine learning tool used to learn linear predictors in high dimensional feature space. The high dimensional feature space raises both sample complexity and computational complexity challenges. Consider the previous post on K-Nearest Neighbour, using Euclidean distance metric results in high misclassification error due to the curse of dimensionality. In this post, we explore a different machine learning method for classification in high dimensional feature space. This article will cover the different svm learning rules and introduce the concept of margins in relation to the regularized loss minimization paradigm. I will continue using digit recognition for examples but with different ML predictors. In this case I will use the three different SVM predictors to classify digits. 
+Support Vector Machines (SVM) are supervised learning models that can be used for classification or regression. They can be used to 
+efficiently perform classification in high dimensional feature spaces. The high dimensional feature space raises both sample complexity and computational complexity challenges. Consider the previous post on K-Nearest Neighbour, using Euclidean distance metric results in high misclassification error due to the curse of dimensionality. In this post, we explore a different machine learning method for classification in high dimensional feature space. This article will cover the different svm learning rules and introduce the concept of margins in relation to the regularized loss minimization paradigm. I will continue using digit recognition for examples but with different ML predictors. In this case I will use the three different SVM predictors to classify digits. 
+
+# Applications
+They are often used in applications such as:
+* Image Recognition
+* Computer Vision
+* Natural Language Processing 
+* Text and Hypertext Categorization
+* Protein fold and remote homology detection
 
 # Margin
 Consider a set $$ S = (x^1,y^1), ..., (x^n, y^n) $$ that is used to provide training instances of $$d$$ dimension for a classification model. A margin of a hyperplane is defined as the minimal distance between a point in the training dataset and the hyperplane. The true error is bounded by the margin over the training dataset and as a result the larger the margin the smaller the error, regardless of the Euclidean distance. In general, SVMs are more robust to perturbation and work well for high-dimensional data. 
